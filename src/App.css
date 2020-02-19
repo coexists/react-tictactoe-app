@@ -1,6 +1,8 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  font: 42px "Comic Sans MS", cursive, sans-serif;
+  color: blue;
+  max-width: 500px;
+  margin: auto;
 }
 
 ol, ul {
