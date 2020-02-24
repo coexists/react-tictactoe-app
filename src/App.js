@@ -33,16 +33,17 @@ class App extends React.Component {
     this.setState({loggedIn:loggedInStatus});
   }
   render() {
-    let returnComponent;
-    const login = <Login users = {this.state.users}
-    logInUser={() => this.logInUser(true)} />;
-    const game = <Game logOutUser={() => this.logInUser(false)} />;
-    if(!this.state.loggedIn) {
-      returnComponent = login;
-    } else {
-      returnComponent = game;
-    }
-   return returnComponent;
+    return (
+      (this.state.register) ?
+      <Register />
+      :
+        (!this.state.loggedIn) ?
+        <Login users={this.state.users}
+        logInUser={() => this.logInUser(true)} 
+        />
+        :
+        <Game logInUser={() => this.logInUser(false)} />
+    )    
   }
 }
 

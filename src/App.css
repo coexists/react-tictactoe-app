@@ -3,6 +3,7 @@ body {
   color: blue;
   max-width: 500px;
   margin: auto;
+  background-color: grey;
 }
 
 ol, ul {
